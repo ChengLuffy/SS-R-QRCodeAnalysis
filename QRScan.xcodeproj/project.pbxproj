@@ -13,6 +13,7 @@
 		2A6922181DA8A27900558DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6922161DA8A27900558DD1 /* Main.storyboard */; };
 		2A6922231DA8A27900558DD1 /* QRScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6922221DA8A27900558DD1 /* QRScanTests.swift */; };
 		2A69222E1DA8A27900558DD1 /* QRScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A69222D1DA8A27900558DD1 /* QRScanUITests.swift */; };
+		2A6922441DA8C42200558DD1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6922431DA8C42200558DD1 /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,9 @@
 		2A6922291DA8A27900558DD1 /* QRScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A69222D1DA8A27900558DD1 /* QRScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanUITests.swift; sourceTree = "<group>"; };
 		2A69222F1DA8A27900558DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A6922411DA8C42100558DD1 /* QRScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QRScan-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A6922421DA8C42200558DD1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		2A6922431DA8C42200558DD1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +99,14 @@
 		2A69220F1DA8A27900558DD1 /* QRScan */ = {
 			isa = PBXGroup;
 			children = (
+				2A6922421DA8C42200558DD1 /* Utils.h */,
+				2A6922431DA8C42200558DD1 /* Utils.m */,
 				2A6922101DA8A27900558DD1 /* AppDelegate.swift */,
 				2A6922121DA8A27900558DD1 /* ViewController.swift */,
 				2A6922141DA8A27900558DD1 /* Assets.xcassets */,
 				2A6922161DA8A27900558DD1 /* Main.storyboard */,
 				2A6922191DA8A27900558DD1 /* Info.plist */,
+				2A6922411DA8C42100558DD1 /* QRScan-Bridging-Header.h */,
 			);
 			path = QRScan;
 			sourceTree = "<group>";
@@ -190,6 +197,7 @@
 				TargetAttributes = {
 					2A69220C1DA8A27900558DD1 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					2A69221D1DA8A27900558DD1 = {
@@ -255,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6922441DA8C42200558DD1 /* Utils.m in Sources */,
 				2A6922131DA8A27900558DD1 /* ViewController.swift in Sources */,
 				2A6922111DA8A27900558DD1 /* AppDelegate.swift in Sources */,
 			);
@@ -397,11 +406,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QRScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChengLuffy.QRScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QRScan/QRScan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -410,11 +422,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QRScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChengLuffy.QRScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QRScan/QRScan-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
